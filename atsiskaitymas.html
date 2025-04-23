@@ -59,6 +59,46 @@
 
 
         console.log("***Šešta užd***");
+        let skaiciai = "";
+        for (let index = 1; index < 11; index++) {
+            skaiciai += index;
+            if (index<10){
+                skaiciai += "-"
+            }
+            
+        }
+        console.log(skaiciai);
+        
+
+        console.log("***Septinta užd***");
+        for (let index = 1; index <= 5; index++) {
+            let eile = "";
+            for (let i = 1; i <= index; i++) {
+                eile += "* ";   
+            }
+            
+            console.log(eile);
+        }
+
+        console.log("***Aštunta užd***");
+        let dabar = new Date();
+        let Kaledos = new Date (2025, 11, 25);
+        function ikiKaleduLiko() {
+            return Kaledos - dabar
+        }
+        let likoDienu = Math.ceil((ikiKaleduLiko())/(1000*60*60*24))
+        console.log(`Iki Kalėdų liko: ${likoDienu} dienų(-os)`);
+        
+        console.log("***Devinta užd***");
+
+        let vardai = ["Tomas", "Dainius","Paulius","Jonas"];
+        console.log(vardai.join());
+        console.log(vardai.join("+"));
+
+
+        console.log("***Dešimta užd***");
+
+        
     </script>
 </body>
 </html>
