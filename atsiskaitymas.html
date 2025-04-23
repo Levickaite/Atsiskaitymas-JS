@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atsiskaitymas</title>
+</head>
+<body>
+    <script>
+        console.log("***Pirma užd***");
+        function valiutosKeitimasEur(eur){
+            let kursas = 1.14;
+            return Math.floor(eur * kursas)
+        }
+        let sumaEurais = Math.floor(Math.random()*1000+1);
+        console.log(`${sumaEurais} EUR = ${valiutosKeitimasEur(sumaEurais)} USD`);
+        
+        console.log("***Antra užd***");
+
+        function valiutosKeitimasDol(dol){
+            let kursas = 1.14;
+            return Math.floor(dol / kursas)
+        }
+        let sumaDoleriais = Math.floor(Math.random()*1000+1);
+        console.log(`${sumaDoleriais} DOL = ${valiutosKeitimasDol(sumaDoleriais)} EUR`);
+
+        console.log("***Trečia užd***");
+        let svoris = Math.floor(Math.random()*100+1);
+        let ugis = (Math.random()*2).toFixed(2)
+        function KMI (svoris,ugis){
+            return KMI = (svoris / (ugis * ugis)).toFixed(2)
+        }
+        console.log(`Svoris: ${svoris}; \nŪgis: ${ugis}\nKMI: ${KMI(svoris,ugis)}`);
+        
+        console.log("***Ketvirta užd***");
+        let amzius = Math.floor(Math.random()*100+1);
+        function isskaidytasAmzius (amzius){
+            let dienomis = amzius * 365;
+            let valandomis = dienomis * 24;
+            let minutemis = valandomis * 60;
+            let sekundemis = minutemis *60;
+            return (`${amzius} metų(-ai) yra ${dienomis} dienomis; ${valandomis} valandomis; ${minutemis} minutėmis; ${sekundemis} sekundėmis.`)
+        }
+        console.log(isskaidytasAmzius(amzius));
+        
+        console.log("***Penkta užd***");
+        //Mokykloj tikrai netokią kompleksišką formulę naudojom Farenheitui, bet pasitikėsiu labiau googlu, nei savo atmintim :D//
+        function farenheitasICelsiju(far){
+            return ((far - 32) / (9/5))
+        }
+        let far = Math.floor(Math.random()*100+1);
+        console.log(`${far} °F = ${farenheitasICelsiju(far)} °C`);
+
+        function celsijusIFarenheita(cel){
+            return ((cel * (9/5) + 32))
+        }
+        let cel = Math.floor(Math.random()*100+1);
+        console.log(`${cel} °C = ${celsijusIFarenheita(cel)} °F`);
+
+
+        console.log("***Šešta užd***");
+    </script>
+</body>
+</html>
