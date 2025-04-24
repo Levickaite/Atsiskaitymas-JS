@@ -98,6 +98,21 @@
 
         console.log("***Dešimta užd***");
 
+        function slaptazodis (){
+            let mazosios = "abcdefghijklmnopqrstuvwxyz";
+            let didziosios = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let skaiciai = "0123456789";
+            let simboliai = "!@#$%^&*+()_`~";
+            let apjungtiSimboliai = mazosios + didziosios + skaiciai + simboliai;
+            let galutinis = "";
+            for (let index = 0; index <= 12; index++) {
+                galutinis += apjungtiSimboliai[Math.floor(Math.random() * apjungtiSimboliai.length)];
+                
+            }
+            return galutinis;
+        }
+        console.log(slaptazodis());
+        //mačiau, kad yra Fisher Yates metodas, bet atsiskaitymams nenorėjau naudot, ko nelabai suprantu.
         
     </script>
 </body>
